@@ -1,0 +1,1 @@
+<table border="0" bgcolor="#CCCCCC" width="100%" cellpadding="10"><tr><td>BLA BLAAssssA<p><input name="" type="text" value=""></td></tr></table>

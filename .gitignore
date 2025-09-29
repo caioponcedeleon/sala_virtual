@@ -1,0 +1,24 @@
+# IDE/Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency management
+/vendor/
+/composer.phar
+
+# Logs and cache
+*.log
+/cache/
+/tmp/
+
+# Sensitive data
+.env
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Ignore configuration file
+conectar.php
