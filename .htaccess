@@ -2,14 +2,12 @@ Options +FollowSymLinks
 
 RewriteEngine On
 
-# RewriteCond %{HTTPS} !=on
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
-# Header always set Content-Security-Policy "upgrade-insecure-requests;"
-
-RewriteRule ^inicio/?$ index.php
+RewriteRule ^m_([^/]+)/?$ index.php?m=$1
 RewriteRule ^inicio/m_([^/]+)/?$ index.php?m=$1
+RewriteRule ^inicio/?$ index.php
 RewriteRule ^acessar_conta/?$ acoes.php?a=login
-RewriteRule ^minha_area/?$ index.php
+
+RewriteRule ^minha_area/?$ minha_area.php
 
 RewriteRule ^adicionar_vocabulo/?$ adicionar_vocabulo.php
 RewriteRule ^adicionar_vocabulo/([^/]+)/?$ adicionar_vocabulo_$1.php
@@ -21,6 +19,10 @@ RewriteRule ^administracao/apresentacoes/a/([^/]+)/m/([^/]+)?$ adm-apresentacoes
 RewriteRule ^administracao/apresentacoes/a/([^/]+)/adicionar_transparencia?$ adm-apresentacoes.php?p=3&t=$1
 RewriteRule ^administracao/apresentacoes/a/([^/]+)/editar_transparencia?$ adm-apresentacoes.php?p=4&t=$1
 RewriteRule ^administracao/apresentacoes/m/([^/]+)/?$ adm-apresentacoes.php?m=$1
+
+## Redirects to actions
+
+RewriteRule ^acao_login?$ acao_login.php
 
 RewriteRule ^acoes/([^/]+)/?$ acoes.php?a=$1
 RewriteRule ^acoes/([^/]+)/([^/]+)-([^/]+)?$ acoes.php?a=$1&$2=$3
