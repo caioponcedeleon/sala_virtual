@@ -70,7 +70,7 @@ This project was created during the **COVID-19 pandemic** to transform passive v
 
 4. **Configure the database connection:**
 
-Edit config.php or db.php with your local database credentials (username, password, database name)
+Edit conectar.php with your local database credentials (username, password, database name)
 
 5. **Start your local server:**
 
